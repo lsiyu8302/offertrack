@@ -2,6 +2,12 @@
 
 > 一个为求职者设计的本地看板应用。追踪申请进展、截止日期和面试安排，不遗漏任何机会。
 
+## 界面预览
+
+![看板视图](public/screenshot-board.png)
+
+![引导界面](public/screenshot-onboarding.png)
+
 ## 功能概览
 
 ### 看板视图
