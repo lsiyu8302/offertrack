@@ -10,7 +10,8 @@ export function UrgentBanner({ jobs, onViewAll }: UrgentBannerProps) {
   const summary = getUrgentEventsText(jobs);
   if (!summary) return null;
 
-  const { prefix, events, extraCount } = summary;
+  const { events, extraCount } = summary;
+  const totalCount = events.length + extraCount;
   const eventsText = events.join(' · ');
 
   return (
@@ -48,11 +49,8 @@ export function UrgentBanner({ jobs, onViewAll }: UrgentBannerProps) {
             whiteSpace: 'nowrap',
           }}
         >
-          <span style={{ fontWeight: 500 }}>{prefix}：</span>
           <span>{eventsText}</span>
-          {extraCount > 0 && (
-            <span style={{ color: '#475569' }}>，另有 {extraCount} 件</span>
-          )}
+          <span style={{ color: '#DC2626', fontWeight: 500 }}> 等 {totalCount} 件紧急</span>
         </div>
       </div>
 
